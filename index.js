@@ -28,7 +28,7 @@ function endGame(){
 		alert("you won");
 	}
 	else{
-		alert("jkdls");
+		alert("you lost");
 	}	
 }
 
