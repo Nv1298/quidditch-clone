@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-color: lightblue;
+  width: 800px;
+  height: 700px;
+}
+.button{
+  position: absolute;
+  z-index: 4;
+  left: 1200px;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+.button:hover {
+  position: absolute;
+  z-index: 3;
+  background-color: green;
+}
+#circle{
+  position: absolute;
+  z-index: 4;
+  left: 200px;
+  top: 0px;
+  height: 40px;
+  width: 40px;
+  background-color: red;
+  border-radius: 50%;
+}
+#snitch{
+  position: absolute;
+  z-index: 2;
+  left: 0px;
+  height: 20px;
+  width: 20px;
+  background-color: gold;
+  border-radius: 20%;
+}
+#pole {
+  position: absolute;
+  z-index: 1;
+  width: 200px;
+  height: 700px;
+  background-color: yellow;
+  top: 0px;
+  left: 0px;
+}
+#pole2 {
+  position: absolute;
+  left: 1160px;
+  z-index: 1;
+  width: 200px;
+  height: 700px;
+  background-color: yellow;
+  top: 0px;
+}
+#b{
+  background-color: black;
+}
+#stalls{
+  z-index: -1;
+  width: 1200px;
+  height: 100px;
+  position: absolute;
+  top: 220px;
+  left: 140px;
+  background-color: yellow;
+}
+#hoop1{
+  border-radius: 30px;
+  border: 4px solid yellow;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 500px;
+  top: 120px;
+}
+#hoop2{
+ border-radius: 30px;
+  border: 4px solid yellow;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 600px;
+  top: 80px;
+}
+#hoop3{
+border-radius: 30px;
+  border: 4px solid yellow;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 700px;
+  top: 120px;
+}
+#stand1{
+  width: 3px;
+  height: 50px;
+  background-color: yellow;
+  position: absolute;
+  left: 525px;
+  top: 175px;
+}
+#stand2{
+  width: 3px;
+  height: 90px;
+  background-color: yellow;
+  position: absolute;
+  left: 625px;
+  top: 135px;
+}
+#stand3{
+  width: 3px;
+  height: 45px;
+  background-color: yellow;
+  position: absolute;
+  left: 725px;
+  top: 175px;
+}
+.semi-circle{
+  position: absolute;
+  z-index: -2;
+  left: 150px;
+  top: 320px;
+  width: 1100px;
+  height: 350px;
+  background-color: green;
+  border-radius: 80px 80px 0px 0px;
+}
+
+#head{
+  position: absolute;
+  left: 300px;
+  top: 550px;
+  height: 40px;
+  width: 40px;
+  background-color: black;
+  border-radius: 50px;
+  z-index: 5;
+}
+#strand{
+  position: absolute;
+  left: 290px;
+  top: 575px;
+  height: 40px;
+  width: 40px;
+  border: 1px solid black;
+  border-radius: 100px;
+  z-index: 5;
+}
+#back{
+  position: absolute;
+  left: 290px;
+  top: 590px;
+  height: 100px;
+  width: 50px;
+  border-radius: 10px;
+  background-color: #990000;
+  color: gold;
+  font-size: 20px;
+  z-index: 5;
+}
+#cape{
+  position: absolute;
+  left: 245px;
+  top: 510px;
+  vertical-align: middle;
+  width: 45px;
+  height: 80px;
+  border-bottom: solid 50px #333333;
+  border-left: solid 50px transparent;
+  border-right: solid 50px transparent;
+  border-radius: 30px;
+  z-index: 5;
+}
+#strand1{
+  position: absolute;
+  left: 298px;
+  top: 570px;
+  vertical-align: middle;
+  width: 10px;
+  height: 10px;
+  border-bottom: solid 10px black;
+  border-left: solid 5px transparent;
+  border-right: solid 5px transparent;
+  border-radius: 30px;
+  z-index: 5;
+}
+#strand2{
+  position: absolute;
+  left: 320px;
+  top: 570px;
+  vertical-align: middle;
+  width: 10px;
+  height: 10px;
+  border-bottom: solid 10px black;
+  border-left: solid 5px transparent;
+  border-right: solid 5px transparent;
+  border-radius: 30px;
+  z-index: 5;
+}
+
+#strand{
+  position: absolute;
+  z-index: 6;
+  left: 295px;
+  top: 600px;
+  width: 20px;
+  height: 15px;
+  background-color: black;
+  border-radius: 80px 80px 0px 0px;
+  transform: rotate(280deg);
+}
+
+#pointB{
+  border: 3px solid brown;
+  background-color: black;
+  position: absolute;
+  width: 100px;
+  height: 90px;
+  left: 1165px;
+  top: 100px;
+  z-index: 4;
+  color: white;
+  padding-top: 30px;
+  padding-left: 25px;
+  font-size: 25px;
+}
+#horizontal-line{
+  width: 130px;
+  height: 2px;
+  position: absolute;
+  top: 120px;
+  left: 1168px;
+  z-index: 5;
+  background-color: white;
+}
+#vertical-line{
+  width: 2px;
+  height: 120px;
+  position: absolute;
+  top: 100px;
+  left: 1250px;
+  z-index: 5;
+  background-color: white;
+}
+#textP{
+  color: white;
+  font-size: 15px;
+  position: absolute;
+  top: 90px;
+  left: 1185px;
+  z-index: 5;
+}
+#textS{
+  color: white;
+  font-size: 15px;
+  position: absolute;
+  top: 90px;
+  left: 1255px;
+  z-index: 5;
+}
+#ohead{
+  background-color: #FFE5B4;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 100px;
+  left: 500px;
+  border-radius: 100px;
+  z-index: 5;
+}
+#ohair{
+  background-color: black;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 100px;
+  left: 498px;
+  border-radius: 100px;
+  z-index: 4;
+}
+#obody{
+  background-color: green;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 110px;
+  left: 498px;
+  border-radius: 40px;
+  z-index: 4;
+}
+#obroom{
+  background-color: #B28E48;
+  width: 30px;
+  height: 5px;
+  position: absolute;
+  top: 120px;
+  left: 495px;
+  border-radius: 10px;
+  z-index: 5;
+}
+#otail{
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  left: 515px;
+  top: 95px;
+  width: 8px;
+  height: 16px;
+  border-bottom: solid 8px brown;
+  border-right: solid 8px transparent;
+  border-top: solid 8px transparent;
+  border-radius: 5px;
+  z-index: 6;
+}
+#oleg1{
+  position: absolute;
+  left: 508px;
+  top: 119px;
+  width: 5px;
+  height: 15px;
+  border-radius: 20px;
+  background-color: black;
+  z-index: 6;
+}
+#oleg2{
+  position: absolute;
+  left: 500px;
+  top: 118px;
+  width: 5px;
+  height: 15px;
+  border-radius: 20px;
+  background-color: black;
+  z-index: 2;
+}
+
+</style>
+<body>
+<div id="head"></div>
+<div id="back" style="text-align:center"><br/><br/></div>
+<div id="cape"></div>
+<div id="strand1"></div>
+<div id="strand2"></div>
+<div id="circle"></div>
+<div id="ohead"></div>
+<div id="ohair"></div>
+<div id="obody"></div>
+<div id="obroom"></div>
+<div id="otail"></div>
+<div id="oleg1"></div>
+<div id="oleg2"></div>
+<table id="pole2">
+  <tr>
+    <td></td>
+    <td id="b"></td>
+    <td></td>
+    <td id="b"></td>
+  </tr>
+  <tr>
+    <td id="b"></td>
+    <td></td>
+    <td id="b"></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td id="b"></td>
+    <td></td>
+    <td id="b"></td>
+  </tr>
+  <tr>
+    <td id="b"></td>
+    <td></td>
+    <td id="b"></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td id="b"></td>
+    <td></td>
+    <td id="b"></td>
+  </tr>
+  <tr>
+    <td id="b"></td>
+    <td></td>
+    <td id="b"></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td id="b"></td>
+    <td></td>
+    <td id="b"></td>
+  </tr>
+</table>
+
+<table id="pole">
+  <tr>
+    <td></td>
+    <td id="b"></td>
+    <td></td>
+    <td id="b"></td>
+  </tr>
+  <tr>
+    <td id="b"></td>
+    <td></td>
+    <td id="b"></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td id="b"></td>
+    <td></td>
+    <td id="b"></td>
+  </tr>
+  <tr>
+    <td id="b"></td>
+    <td></td>
+    <td id="b"></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td id="b"></td>
+    <td></td>
+    <td id="b"></td>
+  </tr>
+  <tr>
+    <td id="b"></td>
+    <td></td>
+    <td id="b"></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td id="b"></td>
+    <td></td>
+    <td id="b"></td>
+  </tr>
+</table>
+
+<table id="stalls">
+  <tr>
+    <td id="b"></td>
+    <td></td>
+    <td id="b"></td>
+    <td></td>
+    <td id="b"></td>
+    <td></td>
+    <td id="b"></td>
+    <td></td>
+    <td id="b"></td>
+    <td></td>
+    <td id="b"></td>
+    <td></td>
+    <td id="b"></td>
+    <td></td>
+    <td id="b"></td>
+    <td></td>
+    <td id="b"></td>
+    <td></td>
+    <td id="b"></td>
+    <td></td>
+    <td id="b"></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td id="b"></td>
+    <td></td>
+    <td id="b"></td>
+    <td></td>
+    <td id="b"></td>
+    <td></td>
+    <td id="b"></td>
+    <td></td>
+    <td id="b"></td>
+    <td></td>
+    <td id="b"></td>
+    <td></td>
+    <td id="b"></td>
+    <td></td>
+    <td id="b"></td>
+    <td></td>
+    <td id="b"></td>
+    <td></td>
+    <td id="b"></td>
+    <td></td>
+    <td id="b"></td>
+  </tr>
+  <tr>
+    <td id="b"></td>
+    <td></td>
+    <td id="b"></td>
+    <td></td>
+    <td id="b"></td>
+    <td></td>
+    <td id="b"></td>
+    <td></td>
+    <td id="b"></td>
+    <td></td>
+    <td id="b"></td>
+    <td></td>
+    <td id="b"></td>
+    <td></td>
+    <td id="b"></td>
+    <td></td>
+    <td id="b"></td>
+    <td></td>
+    <td id="b"></td>
+    <td></td>
+    <td id="b"></td>
+    <td></td>
+  </tr>
+</table>
+<div id="hoop1"></div>
+<div id="hoop2"></div>
+<div id="hoop3"></div>
+<div id="stand1"></div>
+<div id="stand2"></div>
+<div id="stand3"></div>
+<div class="checkered3"></div>
+<div class="semi-circle"></div>
+<p id="textP">Points</p>
+<p id="textS">Snitch</p>
+<div id="horizontal-line"></div>
+<div id="vertical-line"></div>
+<div id="pointB">
+  <table>
+    <tr>
+      <td id="points"></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td id="snitchCaught"></td>
+    </tr>
+  </table>
+</div>
+<button class="button" onclick="openModal()">Start</button>
+<div id="snitch" onclick="start()"></div>
+<script>document.body.style.overflow = 'hidden';</script>
+<script type="text/javascript" src="index.js"></script>
+<script type="text/javascript" src="player.js"></script>
+<script type="text/javascript" src="quaffle.js"></script>
+<script type="text/javascript" src="sample.js"></script>
+<script type="text/javascript" src="opponent.js"></script>
+
+
+</body>
+</head>
+</html>
